@@ -11,7 +11,7 @@ class Website extends Model
     {
         return $this->hasMany(Post::class,'website_id');
     }
-    public function subscriper(){
-        return $this->belongsToMany(Subscriper::class,'subscriber_website','website_id','subscriber_id');
+    public function subscriber(){
+        return $this->belongsToMany(Subscriber::class,'subscriber_website','website_id','subscriber_id');
     }
 }
